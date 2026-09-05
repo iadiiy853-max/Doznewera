@@ -1,6 +1,7 @@
 import asyncio
 import re
 import base64
+import os
 import aiohttp
 import phonenumbers
 from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton
@@ -12,7 +13,7 @@ except ImportError:
     CopyTextButton = None
 
 # === CONFIGURATION ===
-BOT_TOKEN = "8675541456:AAE-MVM3SBSapH6OskTolW5QMiAYz3wiibk"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 GROUP_ID = -1004477654826
 API_URL = "http://38.253.224.75:4548/otp?count=200"
 POLL_INTERVAL = 5  # Seconds between API checks

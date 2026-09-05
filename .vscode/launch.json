@@ -3,5 +3,25 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug DOZNEW",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/DOZNEW",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "BOT_TOKEN": "${env:BOT_TOKEN}"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
 }
